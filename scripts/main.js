@@ -11,7 +11,7 @@ navElement.addEventListener("click", (event) => {
 		filterLegos("Red")
 	} else if (event.target.id === "showAll") {
 		makeLegoList(useLegos())
-	}
+	} 
 })
 
 const filterLegos = (whatFilter) => {
@@ -33,3 +33,30 @@ const startEIA = () => {
 }
 
 startEIA();
+
+/*
+
+else if (event.target.id === "showSolid") {
+	filterLegos("Solid")
+}else if (event.target.id === "showTransparent") {
+	filterLegos("Transparent")
+}else if (event.target.id === "showPearl") {
+	filterLegos("Pearl")
+}else if (event.target.id === "showChrome") {
+	filterLegos("Chrome")
+}else if (event.target.id === "showMetallic") {
+	filterLegos("Metallic")
+}else if (event.target.id === "showMilky") {
+	filterLegos("Milky")
+}else if (event.target.id === "showGlitter") {
+	filterLegos("Glitter")
+}else if (event.target.id === "showSpeckle") {
+	filterLegos("Speckle")
+}else if (event.target.id === "showInk") {
+	filterLegos("Ink")
+}else if (event.target.id === "showProcess") {
+	filterLegos("Process")
+}else if (event.target.id === "showModulex") {
+	filterLegos("Modulex")
+}
+*/
