@@ -23,6 +23,24 @@ const filterLegos = (whatFilter) => {
 	makeLegoList(filterArray);
 }
 
+const materialElement = document.querySelector("#materialOption");
+
+materialElement.addEventListener("change", (event) => {
+	if (event.target.id === "materialOption") {
+		const materialValue = (event.target.value);
+		filterMaterial(materialValue)
+	}
+})
+
+const filterMaterial = (whatFilter) => {
+	const filterArray = useLegos().filter(singleLego => {
+		if (singleLego.Material.includes(whatFilter)) {
+			return singleLego;
+		}
+	})
+	makeLegoList(filterArray);
+}
+
 
 const startEIA = () => {
 	loadLegos()
@@ -34,29 +52,3 @@ const startEIA = () => {
 
 startEIA();
 
-/*
-
-else if (event.target.id === "showSolid") {
-	filterLegos("Solid")
-}else if (event.target.id === "showTransparent") {
-	filterLegos("Transparent")
-}else if (event.target.id === "showPearl") {
-	filterLegos("Pearl")
-}else if (event.target.id === "showChrome") {
-	filterLegos("Chrome")
-}else if (event.target.id === "showMetallic") {
-	filterLegos("Metallic")
-}else if (event.target.id === "showMilky") {
-	filterLegos("Milky")
-}else if (event.target.id === "showGlitter") {
-	filterLegos("Glitter")
-}else if (event.target.id === "showSpeckle") {
-	filterLegos("Speckle")
-}else if (event.target.id === "showInk") {
-	filterLegos("Ink")
-}else if (event.target.id === "showProcess") {
-	filterLegos("Process")
-}else if (event.target.id === "showModulex") {
-	filterLegos("Modulex")
-}
-*/
